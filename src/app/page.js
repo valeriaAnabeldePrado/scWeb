@@ -3,6 +3,7 @@ import Wraper from "./componentes/wraper";
 import SeccionServ from "./componentes/cuerpo/seccionServ";
 import Presentacion from "./componentes/cuerpo/presentacion";
 import CardServicios from "./componentes/cuerpo/cardServicios";
+import Penultima from "./componentes/cuerpo/penultima";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
           <SeccionServ />
         </div>
         <CardServicios />
+        <Penultima />
       </Wraper>
     </>
   );

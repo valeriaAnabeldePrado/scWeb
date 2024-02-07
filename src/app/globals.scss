@@ -48,3 +48,8 @@ $fuenteEscritorio: 1.1em;
   font-weight: 600;
   font-style: normal;
 }
+@mixin poppinMedium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
