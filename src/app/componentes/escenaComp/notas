@@ -1,0 +1,16 @@
+esfera comun iridiscente
+{/* <meshPhysicalMaterial
+          roughness={1}
+          metalness={0.7}
+          ior={1}
+          iridescence={1}
+          reflectivity={0}
+          iridescenceIOR={1.94}
+          sheenRoughness={1}
+          specularIntensity={1}
+          clearcoat={0.73}
+          color={"#049ef4"}
+          emissive={"#000"}
+          sheenColor={"#000"}
+          specularColor={"#fff"}
+        /> */}
