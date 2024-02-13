@@ -3,13 +3,17 @@ import * as THREE from "three";
 import React from "react";
 import holo from "../textures/texturaIriNegro.jpg";
 import { useLoader } from "@react-three/fiber";
-import { Environment } from "@react-three/drei";
+import { Environment, useGLTF, useAnimations } from "@react-three/drei";
 import { useEffect, useRef } from "react";
 import { useThree } from "@react-three/fiber";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
-const ShapeDistor = () => {
+const ShapeDistor = (props) => {
+  const group = useRef();
+  const { nodes, materials, animations } = useGLTF("/blob.glb");
+  const { actions } = useAnimations(animations, group);
+
   const textura = useLoader(THREE.TextureLoader, holo.src);
   const { camera, size } = useThree();
   const sphereRef = useRef();
@@ -41,11 +45,29 @@ const ShapeDistor = () => {
         z: 16,
       })
       .to(
+        esfera2.current.rotation,
+        {
+          x: 6,
+          y: 7,
+          z: 1,
+        },
+        "<"
+      )
+      .to(
         sphereRef.current.scale,
         {
-          x: 4.5,
-          y: 4.5,
-          z: 5,
+          x: 10,
+          y: 10,
+          z: 10,
+        },
+        "<"
+      )
+      .to(
+        sphereRef.current.rotation,
+        {
+          x: 0,
+          y: 1.3,
+          z: 2,
         },
         "<"
       );
@@ -62,19 +84,34 @@ const ShapeDistor = () => {
   }, []);
   return (
     <>
-      <mesh
-        receiveShadow={true}
-        scale={0.4}
-        position={[-16, 4, -3]}
-        ref={esfera2}
-      >
-        <meshStandardMaterial map={textura} roughness={0.2} metalness={0.6} />
-        <sphereGeometry args={[2, 20]} />
-      </mesh>
-      <mesh receiveShadow={true} scale={0.5} ref={sphereRef}>
-        <meshStandardMaterial map={textura} roughness={0.2} metalness={0.6} />
-        <sphereGeometry args={[2, 20]} />
-      </mesh>
+      <group name="Scene">
+        <mesh
+          ref={esfera2}
+          name="Sphere"
+          castShadow
+          receiveShadow
+          geometry={nodes.Sphere.geometry}
+          material={materials["Material.001"]}
+          position={[-16, 0, -10]}
+          rotation={[0, 1.3, 3]}
+          scale={2}
+        />
+      </group>
+
+      <group name="Scene">
+        <mesh
+          ref={sphereRef}
+          name="Sphere"
+          castShadow
+          receiveShadow
+          geometry={nodes.Sphere.geometry}
+          material={materials["Material.001"]}
+          position={[0.57, 1.146, 2]}
+          rotation={[5, 0, 3]}
+          scale={2}
+        />
+      </group>
+
       <Environment preset="sunset" />
     </>
   );

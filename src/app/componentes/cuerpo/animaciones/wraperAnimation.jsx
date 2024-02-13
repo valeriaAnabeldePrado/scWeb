@@ -12,10 +12,10 @@ const WraperAnimation = ({ children }) => {
     let timeline = gsap.timeline({
       scrollTrigger: {
         trigger: ".seccionEsfera",
-        start: "210% center",
+        start: "200% center",
         end: "300% center",
         scrub: 1,
-        markers: false,
+        markers: true,
       },
     });
     timeline.to(".contenedor-animacion", {

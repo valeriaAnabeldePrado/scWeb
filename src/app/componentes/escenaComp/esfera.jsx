@@ -8,7 +8,7 @@ const Esfera = () => {
     <>
       <Canvas
         camera={{
-          position: [7, 5, 5],
+          position: [7, 5, 0],
         }}
         style={{
           backgroundColor: "#000",
