@@ -1,53 +1,43 @@
 @import "../globals.scss";
 //----Hero------//
-.hero-cuerpo {
-  overflow: hidden;
-  position: relative;
+.hero-cont {
   height: 100vh;
-  background-color: #1f1d21;
-  background-image: url("/banner3.png");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 0 12%;
+  position: relative;
+  overflow: hidden;
 }
-.esfera {
-  position: absolute;
-  filter: blur(1px);
-  object-fit: contain;
-  background-color: transparent;
+
+.video-back {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.esfera1 {
-  top: 5%;
-  left: 10%;
-  height: 10vh;
-  width: 10vh;
-}
-.esfera2 {
-  right: 5%;
-  bottom: 35%;
-  height: 20vh;
-  width: 20vh;
-}
+
 .textoHero {
-  width: 40%;
-  background-color: transparent;
-  align-self: flex-start;
+  position: absolute;
+  bottom: 40%;
+  left: 12%;
   transform: translateX(-400%);
   opacity: 0;
   font-size: $fuenteEscritorio;
-}
-.tituloHero {
+  color: white;
+  max-width: 40%;
   background-color: transparent;
-  margin-top: 5%;
+}
+
+.tituloHero {
+  position: absolute;
+  bottom: 3%;
+  left: 9%;
+  z-index: 1;
+  color: white;
+  max-width: 100%;
+  background-color: transparent;
+
   .letrasCont {
     display: flex;
     flex-direction: row;
-
     background-color: transparent;
     gap: 3em;
   }
@@ -61,13 +51,84 @@
       padding: 0;
       margin: 0;
       @include fuenteSemiBold;
-      font-size: 13vw;
+      font-size: $fuenteHero;
       opacity: 0;
       transform: translateY(100%);
       background-color: transparent;
     }
   }
 }
+
+//-------//
+
+// .hero-cuerpo {
+//   overflow: hidden;
+//   position: relative;
+//   height: 100vh;
+//   background-color: #1f1d21;
+//   background-image: url("/banner3.png");
+//   background-size: 100%;
+//   background-repeat: no-repeat;
+//   color: #fff;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-end;
+//   align-items: center;
+//   padding: 0 12%;
+// }
+// .esfera {
+//   position: absolute;
+//   filter: blur(1px);
+//   object-fit: contain;
+//   background-color: transparent;
+// }
+// .esfera1 {
+//   top: 5%;
+//   left: 10%;
+//   height: 10vh;
+//   width: 10vh;
+// }
+// .esfera2 {
+//   right: 5%;
+//   bottom: 35%;
+//   height: 20vh;
+//   width: 20vh;
+// }
+// .textoHero {
+//   width: 40%;
+//   background-color: transparent;
+//   align-self: flex-start;
+//   transform: translateX(-400%);
+//   opacity: 0;
+//   font-size: $fuenteEscritorio;
+// }
+// .tituloHero {
+//   background-color: transparent;
+//   margin-top: 5%;
+//   .letrasCont {
+//     display: flex;
+//     flex-direction: row;
+
+//     background-color: transparent;
+//     gap: 3em;
+//   }
+//   .letras {
+//     display: flex;
+//     flex-direction: row;
+//     gap: 1.5em;
+//     background-color: transparent;
+//     height: 31vh;
+//     > p {
+//       padding: 0;
+//       margin: 0;
+//       @include fuenteSemiBold;
+//       font-size: 13vw;
+//       opacity: 0;
+//       transform: translateY(100%);
+//       background-color: transparent;
+//     }
+//   }
+// }
 //-----------secciones------------//
 
 .titlee {
@@ -89,7 +150,8 @@
 }
 //-----presentacio-----//
 .presentacion-container {
-  background: url("/difusas.png") no-repeat 20% 50%;
+  background: url("/fondo2.png") no-repeat;
+  background-size: contain;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -158,7 +220,7 @@
 }
 .sticky {
   background-color: "#221C20";
-  border: 2px solid #221c20;
+  border: 2px solid #000;
   height: 100vh;
   display: flex;
   align-items: center;

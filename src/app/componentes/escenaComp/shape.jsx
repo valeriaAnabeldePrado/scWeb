@@ -7,11 +7,12 @@ import { Environment, useGLTF, useAnimations } from "@react-three/drei";
 import { useEffect, useRef } from "react";
 import { useThree } from "@react-three/fiber";
 import gsap from "gsap";
+import { Suspense } from "react";
 import { ScrollTrigger } from "gsap/all";
 
 const ShapeDistor = (props) => {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF("/blob.glb");
+  const { nodes, materials, animations } = useGLTF("/blob3.glb");
   const { actions } = useAnimations(animations, group);
 
   const textura = useLoader(THREE.TextureLoader, holo.src);
@@ -87,7 +88,6 @@ const ShapeDistor = (props) => {
       <group name="Scene">
         <mesh
           ref={esfera2}
-          name="Sphere"
           castShadow
           receiveShadow
           geometry={nodes.Sphere.geometry}
@@ -112,7 +112,13 @@ const ShapeDistor = (props) => {
         />
       </group>
 
-      <Environment preset="sunset" />
+      <Suspense fallback={null}>
+        <Environment
+          files={["px.png", "nx.png", "py.png", "ny.png", "pz.png", "nz.png"]}
+          path="env2/"
+          blur={2}
+        />
+      </Suspense>
     </>
   );
 };

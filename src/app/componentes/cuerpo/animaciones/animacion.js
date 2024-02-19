@@ -12,24 +12,13 @@ export const paralax = () => {
       markers: false,
     },
   });
-  timeline
-    .to(".esfera1", {
-      top: "30%",
-    })
-    .to(
-      ".esfera2",
-      {
-        bottom: "10%",
-      },
-      "<"
-    )
-    .to(
-      ".tituloHero",
-      {
-        y: "-20%",
-      },
-      "<"
-    );
+  timeline.to(
+    ".tituloHero",
+    {
+      y: "-100%",
+    },
+    "<"
+  );
 };
 
 export const animateTituloA = () => {
