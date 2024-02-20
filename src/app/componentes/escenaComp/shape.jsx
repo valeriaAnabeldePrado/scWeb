@@ -1,7 +1,6 @@
 "use client";
 import * as THREE from "three";
 import React from "react";
-import holo from "../textures/texturaIriNegro.jpg";
 import { useLoader } from "@react-three/fiber";
 import { Environment, useGLTF, useAnimations } from "@react-three/drei";
 import { useEffect, useRef } from "react";
@@ -11,12 +10,8 @@ import { Suspense } from "react";
 import { ScrollTrigger } from "gsap/all";
 
 const ShapeDistor = (props) => {
-  const group = useRef();
   const { nodes, materials, animations } = useGLTF("/blob3.glb");
-  const { actions } = useAnimations(animations, group);
 
-  const textura = useLoader(THREE.TextureLoader, holo.src);
-  const { camera, size } = useThree();
   const sphereRef = useRef();
   const esfera2 = useRef(null);
 

@@ -59,8 +59,41 @@
   }
 }
 
-//-------//
-
+//-------BTNS--------//
+.cont-btnScroll {
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .btnScroll {
+    height: 100%;
+    width: 3%;
+    border-radius: 25px;
+    border: 2px solid #fff;
+    color: #fff;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    > .icono {
+      height: 100%;
+      width: 100%;
+      background-color: transparent;
+      animation: animacionIcono 1.5s linear infinite;
+    }
+  }
+}
+@keyframes animacionIcono {
+  0% {
+    padding-top: 0;
+  }
+  50% {
+    padding-top: 4em;
+  }
+  100% {
+    padding-top: 0;
+  }
+}
+//-----heroviejo----//
 // .hero-cuerpo {
 //   overflow: hidden;
 //   position: relative;

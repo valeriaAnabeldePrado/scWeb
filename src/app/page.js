@@ -5,6 +5,7 @@ import Presentacion from "./componentes/cuerpo/presentacion";
 import CardServicios from "./componentes/cuerpo/cardServicios";
 import Penultima from "./componentes/cuerpo/penultima";
 import HeroVideo from "./componentes/cuerpo/heroVideo";
+import BtnScroll from "./componentes/cuerpo/botones/btnScroll";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Wraper>
         <HeroVideo />
         <Presentacion />
+        <BtnScroll />
         <div className="posicion">
           <SeccionServ />
         </div>
