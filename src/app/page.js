@@ -10,14 +10,16 @@ import BtnScroll from "./componentes/cuerpo/botones/btnScroll";
 export default function Home() {
   return (
     <>
-      <HeroVideo />
-      <Presentacion />
-      <BtnScroll />
-      <div className="posicion">
-        <SeccionServ />
-      </div>
-      <CardServicios />
-      <Penultima />
+      <Wraper>
+        <HeroVideo />
+        <Presentacion />
+        <BtnScroll />
+        <div className="posicion">
+          <SeccionServ />
+        </div>
+        <CardServicios />
+        <Penultima />
+      </Wraper>
     </>
   );
 }

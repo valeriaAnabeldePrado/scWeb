@@ -54,7 +54,7 @@ const HeroVideo = () => {
           </div>
         </div>
         <video autoPlay loop muted playsInline className="video-back">
-          {/* <source src="/banners/video.mp4" type="video/mp4" /> */}
+          <source src="/banners/video.mp4" type="video/mp4" />
         </video>
       </div>
     </>
