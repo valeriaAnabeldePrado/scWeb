@@ -3,12 +3,9 @@ import React, { memo } from "react";
 import { Environment, useGLTF } from "@react-three/drei";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import { Suspense } from "react";
-import { ScrollTrigger } from "gsap/all";
 
 const ShapeDistor = memo(() => {
   const { nodes, materials } = useGLTF("/blob3.glb");
-  gsap.registerPlugin(ScrollTrigger);
   const sphereRef = useRef(null);
   const esfera2 = useRef(null);
 

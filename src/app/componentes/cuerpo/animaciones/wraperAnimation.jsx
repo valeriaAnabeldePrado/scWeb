@@ -2,10 +2,8 @@
 import React from "react";
 import { useEffect } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
 
 const WraperAnimation = ({ children }) => {
-  gsap.registerPlugin(ScrollTrigger);
   //Para que la seccion de servicios se visualice por sobre encima de la esfera de conoce nuestras propuestas
   useEffect(() => {
     let ctx = gsap.context(() => {
