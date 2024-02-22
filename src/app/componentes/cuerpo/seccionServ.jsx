@@ -7,7 +7,7 @@ const SeccionServ = () => {
   return (
     <>
       <section style={{ position: "relative" }} className="seccionEsfera">
-        {/* <Esfera /> */}
+        <Esfera />
         <h1 className="titlee">
           Conoce nuestras propuestas e impulsa tu negocio!
         </h1>

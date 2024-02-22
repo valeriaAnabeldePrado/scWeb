@@ -1,23 +1,18 @@
 "use client";
-import * as THREE from "three";
-import React from "react";
-import { useLoader } from "@react-three/fiber";
-import { Environment, useGLTF, useAnimations } from "@react-three/drei";
+import React, { memo } from "react";
+import { Environment, useGLTF } from "@react-three/drei";
 import { useEffect, useRef } from "react";
-import { useThree } from "@react-three/fiber";
 import gsap from "gsap";
 import { Suspense } from "react";
 import { ScrollTrigger } from "gsap/all";
 
-const ShapeDistor = (props) => {
-  const { nodes, materials, animations } = useGLTF("/blob3.glb");
-
-  const sphereRef = useRef();
+const ShapeDistor = memo(() => {
+  const { nodes, materials } = useGLTF("/blob3.glb");
+  gsap.registerPlugin(ScrollTrigger);
+  const sphereRef = useRef(null);
   const esfera2 = useRef(null);
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
     //Me obtiene los datos del objeto
     // console.log(sphereRef.current.rotation);
     // console.log(esfera2.current);
@@ -77,6 +72,9 @@ const ShapeDistor = (props) => {
       },
       "-=40%"
     );
+    return () => {
+      timeline.kill();
+    };
   }, []);
   return (
     <>
@@ -107,15 +105,9 @@ const ShapeDistor = (props) => {
         />
       </group>
 
-      <Suspense fallback={null}>
-        <Environment
-          files={["px.png", "nx.png", "py.png", "ny.png", "pz.png", "nz.png"]}
-          path="env2/"
-          blur={2}
-        />
-      </Suspense>
+      <Environment preset="city" />
     </>
   );
-};
+});
 
 export default ShapeDistor;
