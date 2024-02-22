@@ -14,9 +14,9 @@ export default function Home() {
         <HeroVideo />
         <Presentacion />
         <BtnScroll />
-        <div className="posicion">
+        {/* <div className="posicion">
           <SeccionServ />
-        </div>
+        </div> */}
         <CardServicios />
         <Penultima />
       </Wraper>
