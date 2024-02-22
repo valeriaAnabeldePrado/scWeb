@@ -1,5 +1,4 @@
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
 
 export const paralax = () => {
   gsap.to(".tituloHero", {
@@ -9,7 +8,6 @@ export const paralax = () => {
       start: "top top",
       end: "bottom center",
       scrub: 1,
-      markers: false,
     },
   });
 };
