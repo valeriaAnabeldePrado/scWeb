@@ -5,28 +5,26 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
 const WraperAnimation = ({ children }) => {
+  gsap.registerPlugin(ScrollTrigger);
   //Para que la seccion de servicios se visualice por sobre encima de la esfera de conoce nuestras propuestas
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+    let ctx = gsap.context(() => {
+      gsap.to(".contenedor-animacion", {
+        y: -300,
+        scrollTrigger: {
+          trigger: ".seccionEsfera",
+          start: "200% center",
+          end: "300% center",
+          scrub: 1,
+        },
+      });
+      return () => ctx.revert();
+    });
 
-    let timeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".seccionEsfera",
-        start: "200% center",
-        end: "300% center",
-        scrub: 1,
-        markers: false,
-      },
-    });
-    timeline.to(".contenedor-animacion", {
-      y: -300,
-    });
     //para que esto ande normalmente, sacarle este wraper para la clase .contenedor animacion, es decir que este estatica porque entra en conflicto con muchos estilos, sino queda asi
   }, []);
   //Animacion de cada card
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".contenedor-stycki",
@@ -59,6 +57,7 @@ const WraperAnimation = ({ children }) => {
       borderRadius: "0",
       duration: 2,
     });
+    return () => tl.kill();
   }, []);
 
   return <div>{children}</div>;
