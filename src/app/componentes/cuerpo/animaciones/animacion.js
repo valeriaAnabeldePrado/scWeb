@@ -2,8 +2,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
 export const paralax = () => {
-  gsap.registerPlugin(ScrollTrigger);
-  let timeline = gsap.timeline({
+  gsap.to(".tituloHero", {
+    y: "-100%",
     scrollTrigger: {
       trigger: ".hero-cuerpo",
       start: "top top",
@@ -12,13 +12,6 @@ export const paralax = () => {
       markers: false,
     },
   });
-  timeline.to(
-    ".tituloHero",
-    {
-      y: "-100%",
-    },
-    "<"
-  );
 };
 
 export const animateTituloA = () => {
@@ -28,6 +21,7 @@ export const animateTituloA = () => {
     .to(".S.posicion3", { duration: 1.1, ease: "power3.out", opacity: 1, y: 0 })
     .to(".C", { duration: 1.7, ease: "power3.out", opacity: 1, y: 0 })
     .to(".S.posicion0", { ease: "power3.out", opacity: 1, y: 0 });
+  return () => timeline.kill();
 };
 
 export const animateTituloB = () => {
@@ -37,6 +31,7 @@ export const animateTituloB = () => {
     .to(".D", { duration: 1.2, ease: "power3.out", opacity: 1, y: 0 })
     .to(".I", { duration: 1.5, ease: "power3.out", opacity: 1, y: 0 })
     .to(".O", { ease: "power3.out", opacity: 1, y: 0 });
+  return () => timelineB.kill();
 };
 
 export const animateTextoHero = () => {
