@@ -5,7 +5,8 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 const ShapeDistor = memo(() => {
-  const { nodes, materials } = useGLTF("/blob3.glb");
+  // const { nodes, materials } = useGLTF("/blob3.glb");
+  const { nodes, materials } = useGLTF("/cristal.glb");
   const sphereRef = useRef(null);
   const esfera2 = useRef(null);
 
@@ -80,8 +81,8 @@ const ShapeDistor = memo(() => {
           ref={esfera2}
           castShadow
           receiveShadow
-          geometry={nodes.Sphere.geometry}
-          material={materials["Material.001"]}
+          geometry={nodes.CrystalLarge6057_Crystal26_0.geometry}
+          material={materials.Crystal26}
           position={[-16, 0, -10]}
           rotation={[0, 1.3, 3]}
           scale={2}
@@ -94,8 +95,8 @@ const ShapeDistor = memo(() => {
           name="Sphere"
           castShadow
           receiveShadow
-          geometry={nodes.Sphere.geometry}
-          material={materials["Material.001"]}
+          geometry={nodes.CrystalLarge6057_Crystal26_0.geometry}
+          material={materials.Crystal26}
           position={[0.57, 1.146, 2]}
           rotation={[5, 0, 3]}
           scale={2}
