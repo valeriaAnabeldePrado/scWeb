@@ -97,7 +97,7 @@ const ShapeDistor = memo(() => {
         />
       </group>
 
-      <Environment preset="city" />
+      <Environment path="/envA" />
     </>
   );
 });
