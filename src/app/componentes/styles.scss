@@ -69,14 +69,14 @@
     height: 100%;
     width: 3%;
     border-radius: 25px;
-    border: 2px solid #fff;
+    border: 3px solid #fff;
     color: #fff;
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
     > .icono {
       height: 100%;
-      width: 100%;
+      width: 80%;
       background-color: transparent;
       animation: animacionIcono 1.5s linear infinite;
     }
@@ -178,7 +178,7 @@
 }
 .canvaAlt {
   height: 100vh;
-  transition: all ease-in-out;
+  //transition: all ease-in-out;
   background-color: #1f1d21;
 }
 //-----presentacio-----//
@@ -323,10 +323,6 @@
   justify-content: center;
   align-items: flex-start;
   gap: 6em;
-  .contactanos-p {
-    @include poppinMedium;
-    font-size: 1.2em;
-  }
   .contactanos-cont-h2 {
     display: flex;
     flex-direction: row;
@@ -345,4 +341,43 @@
       @include poppinMedium;
     }
   }
+}
+.contactanos-p {
+  @include poppinMedium;
+  font-size: 1.2em;
+}
+.contactanos-containerB {
+  color: #fff;
+  height: 50vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 12%;
+  .contactanos-texto {
+    width: 50%;
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+}
+.buttonb {
+  border: 3px solid #fff;
+  border-radius: 25px;
+  padding: 0.8rem 2.5rem;
+}
+.Contactanos-form {
+  padding: 0 12% 8% 12%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.contactanos-for-h2 {
+  @include fuenteExtralightItalic;
+  padding: 0;
+  color: #fff;
+  margin: 0;
+  font-size: 4em;
 }
