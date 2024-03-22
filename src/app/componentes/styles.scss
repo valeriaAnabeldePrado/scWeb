@@ -263,6 +263,9 @@
   position: sticky;
   top: 30%;
   right: 0;
+  @media (min-width: 1000px) {
+    top: 35%;
+  }
   .imagen {
     position: relative;
     height: 80vh;
@@ -345,6 +348,7 @@
 .contactanos-p {
   @include poppinMedium;
   font-size: 1.2em;
+  background-color: transparent;
 }
 .contactanos-containerB {
   color: #fff;
@@ -364,12 +368,10 @@
   }
 }
 .buttonb {
-  border: 3px solid #fff;
-  border-radius: 25px;
-  padding: 0.8rem 2.5rem;
+  @include boton(15rem);
 }
 .Contactanos-form {
-  padding: 0 12% 8% 12%;
+  padding: 0 12% 5% 12%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -380,4 +382,23 @@
   color: #fff;
   margin: 0;
   font-size: 4em;
+}
+.botoon {
+  @include boton(15rem);
+}
+.contactanos-infinite {
+  position: relative;
+  height: 25vh;
+  overflow: hidden;
+  color: #fff;
+  white-space: nowrap;
+  display: flex;
+  .contactanos-infinite-h2 {
+    background-color: transparent;
+    font-size: 8em;
+  }
+  .contactanos-infinite-h2:nth-of-type(2) {
+    position: absolute;
+    left: 100%;
+  }
 }

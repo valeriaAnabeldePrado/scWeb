@@ -54,3 +54,13 @@ $fuenteHero: 14vw;
   font-weight: 500;
   font-style: normal;
 }
+@mixin boton($tamaño) {
+  width: $tamaño !important;
+  border-radius: 25px;
+  transition: 500ms ease-in-out;
+  &:hover {
+    box-shadow: -1px 0px 29px 5px rgba(236, 72, 153, 0.55);
+    -webkit-box-shadow: -1px 0px 29px 5px rgba(236, 72, 153, 0.55);
+    -moz-box-shadow: -1px 0px 29px 5px rgba(236, 72, 153, 0.55);
+  }
+}
