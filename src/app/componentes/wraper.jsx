@@ -22,7 +22,7 @@ const Wraper = ({ children }) => {
 
     requestAnimationFrame(raf);
   }, []);
-  return <div>{children}</div>;
+  return <main>{children}</main>;
 };
 
 export default Wraper;
