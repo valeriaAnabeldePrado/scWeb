@@ -24,17 +24,22 @@
   color: white;
   max-width: 40%;
   background-color: transparent;
+  @media screen and (width <= 1200px) {
+    font-size: $fuenteEscritorioResponsive;
+  }
 }
 
 .tituloHero {
   position: absolute;
   bottom: 3%;
-  left: 9%;
+  left: 9vw;
   z-index: 1;
   color: white;
   max-width: 100%;
   background-color: transparent;
-
+  @media screen and (width <= 1200px) {
+    left: 7vw;
+  }
   .letrasCont {
     display: flex;
     flex-direction: row;
@@ -67,7 +72,7 @@
   align-items: center;
   .btnScroll {
     height: 100%;
-    width: 3%;
+    width: 60px;
     border-radius: 25px;
     border: 3px solid #fff;
     color: #fff;
@@ -189,11 +194,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 8% 12%;
+  padding: $paddingNormal;
   gap: 4em;
+  @media screen and (width <= 1200px) {
+    padding: 0 12% 8% 12%;
+  }
   .presentacion-titulo {
     flex: 1;
-    font-size: 8em;
+    font-size: 7vw;
     background-color: transparent;
     @include fuenteExtralightItalic;
     > h2 {
@@ -206,12 +214,16 @@
     font-size: 1.2em;
     margin-top: 3rem;
     line-height: 23px;
+    @media screen and (width <= 1200px) {
+      font-size: $fuenteEscritorioResponsive;
+    }
   }
 }
 //------cards servicios individuales-----//
 .contenedor-animacion {
   height: auto;
   width: 100%;
+
   background-color: "#221C20";
   color: #fff;
   border-top-right-radius: 50px !important;
@@ -225,9 +237,13 @@
   position: relative;
   border-top-right-radius: 50px !important;
   border-top-left-radius: 50px !important;
+  @media screen and (width <= 1200px) {
+    padding: 2% 12% 0 12%;
+  }
   .cont-cuadradoDos {
     height: auto;
     flex: 1;
+
     .seccion-parrafos {
       background-color: "#221C20";
       display: flex;
@@ -236,21 +252,26 @@
       justify-content: center;
       height: 100vh;
       color: #fff;
-      padding: 3em;
+      padding-right: 3em;
+
       > .section-parrafos-h2 {
         @include fuenteExtralightItalic;
         text-align: start;
-        font-size: 6em;
+        font-size: 6vw;
         padding-bottom: 1em;
         line-height: 5px;
       }
       > .section-parrafos-p {
         @include poppinMedium;
         font-size: 1.2em;
+        @media screen and (width <= 1200px) {
+          font-size: $fuenteEscritorioResponsive;
+        }
       }
     }
   }
 }
+
 .sticky {
   background-color: "#221C20";
   border: 2px solid #000;
@@ -273,6 +294,9 @@
     background-color: transparent;
     border: 2px solid #000;
     display: flex;
+    @media screen and (width <= 1200px) {
+      height: 70vh;
+    }
     .section1 {
       position: absolute;
       top: 0;
@@ -318,8 +342,7 @@
 }
 //-----Penultima---contactanos-------//
 .contactanos-container {
-  height: 50vh;
-  padding: 0 12%;
+  padding: 5% 12%;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -335,12 +358,12 @@
       @include fuenteExtralightItalic;
       padding: 0;
       margin: 0;
-      font-size: 7em;
+      font-size: 6vw;
     }
     .contactanos-cont-h2_strong {
       padding: 0;
       margin: 0;
-      font-size: 8em;
+      font-size: 7vw;
       @include poppinMedium;
     }
   }
@@ -349,14 +372,16 @@
   @include poppinMedium;
   font-size: 1.2em;
   background-color: transparent;
+  @media screen and (width <= 1200px) {
+    font-size: $fuenteEscritorioResponsive;
+  }
 }
 .contactanos-containerB {
   color: #fff;
-  height: 50vh;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 0 12%;
+  padding: 5% 12%;
   .contactanos-texto {
     width: 50%;
     text-align: end;
@@ -395,7 +420,7 @@
   display: flex;
   .contactanos-infinite-h2 {
     background-color: transparent;
-    font-size: 8em;
+    font-size: 7vw;
     width: 200%;
     color: #fff;
     transform: translateX(0);

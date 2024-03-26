@@ -58,7 +58,7 @@ const WraperAnimation = ({ children }) => {
     return () => tl.kill();
   }, []);
 
-  return <div>{children}</div>;
+  return <>{children}</>;
 };
 
 export default WraperAnimation;

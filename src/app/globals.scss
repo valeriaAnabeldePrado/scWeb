@@ -32,7 +32,13 @@ html.lenis {
 }
 //-----variables----//
 $fuenteEscritorio: 1.1em;
+$fuenteEscritorioResponsive: 1em;
 $fuenteHero: 14vw;
+
+$paddingNormal: 8% 12%;
+
+$paddingRespCelu: 2% 9%;
+
 //----Mixing---//
 @mixin fuenteThinItalic {
   font-family: "Poppins", sans-serif;
