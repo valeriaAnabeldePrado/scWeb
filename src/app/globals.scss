@@ -37,7 +37,7 @@ $fuenteHero: 14vw;
 
 $paddingNormal: 8% 12%;
 
-$paddingRespCelu: 2% 9%;
+$paddingRespCelu: 4% 8%;
 
 //----Mixing---//
 @mixin fuenteThinItalic {
@@ -60,6 +60,14 @@ $paddingRespCelu: 2% 9%;
   font-weight: 500;
   font-style: normal;
 }
+@mixin poppinRegularItalic {
+  .poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+}
+
 @mixin boton($tamaño) {
   width: $tamaño !important;
   border-radius: 25px;

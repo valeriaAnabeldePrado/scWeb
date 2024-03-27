@@ -1,13 +1,34 @@
 "use client";
 import React, { memo } from "react";
 import { Environment, useGLTF } from "@react-three/drei";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useThree } from "@react-three/fiber";
 import gsap from "gsap";
 
 const ShapeDistor = () => {
+  const [posision, setPosicion] = useState([-5, -1.5, 6]);
+  const [posisionB, setPosicionB] = useState([-10, 3, -8]);
   const sphereRef = useRef(null);
   const esfera2 = useRef(null);
   const { nodes, materials } = useGLTF("/burbu.glb");
+  const { size } = useThree();
+
+  useEffect(() => {
+    const handleResize = () => {
+      const ancho = size.width;
+      if (ancho < 700) {
+        setPosicion([-5, -6, 2]);
+        setPosicionB([-10, 3, -3]);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [size.width]);
 
   useEffect(() => {
     let timeline = gsap.timeline({
@@ -36,7 +57,7 @@ const ShapeDistor = () => {
 
     timeline.to(
       ".titlee",
-      { opacity: 1, top: "20%", transform: "translateY(0)" },
+      { opacity: 1, top: "15%", transform: "translateY(0)" },
       "-=40%"
     );
 
@@ -53,13 +74,11 @@ const ShapeDistor = () => {
           receiveShadow
           geometry={nodes.Sphere.geometry}
           material={materials["Material.001"]}
-          position={[-10, 3, -12]}
+          position={posisionB}
           scale={1.5}
           rotation={[0.343, 0.825, 0.289]}
         ></mesh>
-      </group>
 
-      <group name="Scene">
         <mesh
           ref={sphereRef}
           name="Sphere"
@@ -67,16 +86,16 @@ const ShapeDistor = () => {
           receiveShadow
           geometry={nodes.Sphere.geometry}
           material={materials["Material.001"]}
-          position={[-5, -1.5, 10]}
+          position={posision}
           rotation={[12, 10, 9]}
           scale={3}
         />
-      </group>
 
-      <directionalLight position={[-5, 2, 15]} intensity={2} />
-      <directionalLight position={[-10, 6, -10]} intensity={5} />
-      <directionalLight position={[20, 6, -35]} intensity={12} />
-      <Environment path="/envA" />
+        <directionalLight position={[-5, 2, 15]} intensity={2} />
+        <directionalLight position={[-10, 6, -10]} intensity={5} />
+        <directionalLight position={[20, 6, -35]} intensity={12} />
+        <Environment path="/envA" />
+      </group>
     </>
   );
 };

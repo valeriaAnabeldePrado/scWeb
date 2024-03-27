@@ -86,6 +86,9 @@
       animation: animacionIcono 1.5s linear infinite;
     }
   }
+  @media screen and (width <= 900px) {
+    margin: 8% 0 0 0;
+  }
 }
 @keyframes animacionIcono {
   0% {
@@ -177,13 +180,16 @@
   padding: 0 5rem;
   text-align: center;
   color: #fff;
-  font-size: 6vw;
+  font-size: 7vw;
   @include fuenteThinItalic;
   transform: translateY(-200%);
+  @media screen and (width <= 900px) {
+    margin: 8% 0 0 0;
+    font-weight: 400;
+  }
 }
 .canvaAlt {
-  height: 100vh;
-  //transition: all ease-in-out;
+  height: 100vh !important;
   background-color: #1f1d21;
 }
 //-----presentacio-----//
@@ -192,6 +198,7 @@
   background-size: contain;
   color: #fff;
   display: flex;
+
   justify-content: center;
   align-items: center;
   padding: $paddingNormal;
@@ -199,13 +206,25 @@
   @media screen and (width <= 1200px) {
     padding: 0 12% 8% 12%;
   }
+  @media screen and (width <= 900px) {
+    padding: 0 9% 4% 9%;
+  }
+  @media screen and (width <= 770px) {
+    flex-direction: column;
+    gap: 1em;
+  }
   .presentacion-titulo {
     flex: 1;
-    font-size: 7vw;
+    font-size: 6vw;
     background-color: transparent;
     @include fuenteExtralightItalic;
     > h2 {
       background-color: transparent;
+    }
+    @media screen and (width <= 770px) {
+      font-size: 4em;
+      flex: 0;
+      align-self: flex-start;
     }
   }
   .presentacion-texto {
@@ -217,13 +236,15 @@
     @media screen and (width <= 1200px) {
       font-size: $fuenteEscritorioResponsive;
     }
+    @media screen and (width <= 770px) {
+      flex: 0;
+    }
   }
 }
 //------cards servicios individuales-----//
 .contenedor-animacion {
   height: auto;
   width: 100%;
-
   background-color: "#221C20";
   color: #fff;
   border-top-right-radius: 50px !important;
@@ -239,6 +260,10 @@
   border-top-left-radius: 50px !important;
   @media screen and (width <= 1200px) {
     padding: 2% 12% 0 12%;
+  }
+
+  @media screen and (width <= 900px) {
+    padding: 0 8% 4% 8%;
   }
   .cont-cuadradoDos {
     height: auto;
@@ -287,6 +312,7 @@
   @media (min-width: 1000px) {
     top: 35%;
   }
+
   .imagen {
     position: relative;
     height: 80vh;
@@ -296,6 +322,10 @@
     display: flex;
     @media screen and (width <= 1200px) {
       height: 70vh;
+    }
+    @media screen and (width <= 900px) {
+      height: 60vh;
+      width: 37vw;
     }
     .section1 {
       position: absolute;
@@ -354,17 +384,28 @@
     flex-direction: row;
     align-items: center;
     width: 100%;
+    @media screen and (width <= 900px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
     .contactanos-cont-h2 {
       @include fuenteExtralightItalic;
       padding: 0;
       margin: 0;
       font-size: 6vw;
+      @media screen and (width <= 900px) {
+        font-size: 4em;
+      }
     }
+    //font-size: 4em;
     .contactanos-cont-h2_strong {
       padding: 0;
       margin: 0;
       font-size: 7vw;
       @include poppinMedium;
+      @media screen and (width <= 900px) {
+        font-size: 5em;
+      }
     }
   }
 }
@@ -413,20 +454,29 @@
 }
 .contactanos-infinite {
   position: relative;
-  height: 25vh;
+  height: auto;
   overflow: hidden;
   color: #fff;
   white-space: nowrap;
   display: flex;
   .contactanos-infinite-h2 {
     background-color: transparent;
-    font-size: 7vw;
-    width: 200%;
+    font-size: 17vh;
+    width: auto;
     color: #fff;
     transform: translateX(0);
   }
-  // .contactanos-infinite-h2:nth-of-type(2) {
-  //   position: absolute;
-  //   left: 100%;
-  // }
+}
+@media screen and (width <= 900px) {
+  .seccion-parrafos {
+    height: 80vh !important;
+    justify-content: flex-end !important;
+  }
+  .sticky {
+    height: 80vh;
+    align-items: flex-end;
+  }
+  .contactanos-infinite-h2 {
+    font-size: 10vh;
+  }
 }

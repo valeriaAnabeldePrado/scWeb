@@ -10,10 +10,6 @@ const Esfera = () => {
         camera={{
           position: [7, 5, 0],
         }}
-        style={{
-          backgroundColor: "#000",
-          height: "100vh",
-        }}
         shadows
         className="canvaAlt"
       >

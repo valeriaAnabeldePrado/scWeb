@@ -14,13 +14,13 @@ const FooterInfinito = () => {
     () => {
       const tl = gsap.timeline({ repeat: -1 });
       tl.to(primerT.current, {
-        xPercent: -100,
+        xPercent: -80,
         duration: 20,
         ease: "linear",
       }).to(
         segundoT.current,
         {
-          xPercent: -100,
+          xPercent: -80,
           duration: 20,
           ease: "linear",
         },

@@ -28,7 +28,7 @@ const WraperAnimation = ({ children }) => {
         trigger: ".contenedor-stycki",
         scrub: 2,
         start: "52% center",
-        end: "+=290%",
+        end: "+=260%",
         markers: false,
         duration: 6,
       },
@@ -58,7 +58,7 @@ const WraperAnimation = ({ children }) => {
     return () => tl.kill();
   }, []);
 
-  return <>{children}</>;
+  return <div style={{ height: "auto" }}>{children}</div>;
 };
 
 export default WraperAnimation;
