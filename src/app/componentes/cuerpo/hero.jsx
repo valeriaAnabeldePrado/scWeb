@@ -5,6 +5,7 @@ import {
   animateTituloB,
   animateTextoHero,
   paralax,
+  paralaxEsferas,
 } from "./animaciones/animacion";
 
 import "../styles.scss";
@@ -19,13 +20,14 @@ const Hero = () => {
     animateTituloB();
     animateTextoHero();
     paralax();
+    paralaxEsferas();
   }, []);
 
   return (
     <>
       <div className="hero-cuerpo" ref={heroRef}>
         <img src="./esferaOsc.png" alt="esfera" className="esfera esfera1" />
-        <img src="./esferaOsc.png" alt="esfera" className="esfera esfera2" />
+        <img src="./blopesfera.png" alt="esfera" className="esfera esfera2" />
         <h4 className="textoHero">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero
           provident fugit sequi! Tenetur aut nostrum nihil labore voluptatibus,

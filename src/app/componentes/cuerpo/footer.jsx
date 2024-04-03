@@ -13,19 +13,14 @@ const FooterInfinito = () => {
   useGSAP(
     () => {
       const tl = gsap.timeline({ repeat: -1 });
-      tl.to(primerT.current, {
+      tl.to([primerT.current, segundoT.current], {
         xPercent: -80,
         duration: 20,
         ease: "linear",
-      }).to(
-        segundoT.current,
-        {
-          xPercent: -80,
-          duration: 20,
-          ease: "linear",
-        },
-        "-=20"
-      );
+      }).to([primerT.current, segundoT.current], {
+        xPercent: 0,
+        duration: 20,
+      });
     },
     { scope: containerRef }
   );

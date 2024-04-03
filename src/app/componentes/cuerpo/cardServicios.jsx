@@ -1,10 +1,10 @@
 import React from "react";
 import "../styles.scss";
 import WraperAnimation from "./animaciones/wraperAnimation";
-import data from "./data/dataContenido";
-import FooterInfinito from "./footer";
+import datosInfo from "./data/dataContenido";
 
 const CardServicios = () => {
+  const { data } = datosInfo;
   return (
     <>
       <WraperAnimation>

@@ -2,7 +2,7 @@ import gsap from "gsap";
 
 export const paralax = () => {
   gsap.to(".tituloHero", {
-    y: "-100%",
+    y: "-50%",
     scrollTrigger: {
       trigger: ".hero-cuerpo",
       start: "top top",
@@ -11,7 +11,18 @@ export const paralax = () => {
     },
   });
 };
+export const paralaxEsferas = () => {
+  gsap.to(".esfera", {
+    y: "50%",
+    scrollTrigger: {
+      trigger: ".hero-cuerpo",
+      start: "200 200",
+      end: "bottom top",
 
+      scrub: 1,
+    },
+  });
+};
 export const animateTituloA = () => {
   let timeline = gsap.timeline();
   timeline
