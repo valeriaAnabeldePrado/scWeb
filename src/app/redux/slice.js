@@ -4,7 +4,7 @@ export const Slice = createSlice({
   name: "tamanioPantalla",
   //estado inicial
   initialState: {
-    tamanio: 2000,
+    tamanio: null,
   },
   //actions, funcion que hace que el estado cambie
   reducers: {

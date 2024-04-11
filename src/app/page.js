@@ -7,19 +7,22 @@ import SeccionServ from "./componentes/cuerpo/seccionServ";
 import FooterInfinito from "./componentes/cuerpo/footer";
 import Penultima from "./componentes/cuerpo/penultima";
 import ServiciosResp from "./componentes/cuerpo/serviciosResp";
+import MiLoader from "./componentes/cuerpo/loader";
 
 export default function Home() {
   return (
     <>
-      <Wraper>
-        <Hero />
-        <Presentacion />
-        <BtnScroll />
-        <SeccionServ />
-        <ServiciosResp />
-        <FooterInfinito />
-        <Penultima />
-      </Wraper>
+      <MiLoader>
+        <Wraper>
+          <Hero />
+          <Presentacion />
+          <BtnScroll />
+          <SeccionServ />
+          <ServiciosResp />
+          <FooterInfinito />
+          <Penultima />
+        </Wraper>
+      </MiLoader>
     </>
   );
 }

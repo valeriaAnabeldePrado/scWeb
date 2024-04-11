@@ -14,7 +14,7 @@ const Presentacion = () => {
           consequuntur aspernatur dignissimos eius repellendus et. Ipsum vitae
           ex obcaecati numquam rem! Lorem ipsum dolor sit amet consectetur
           adipisicing elit.
-          <strong>
+          <strong style={{ backgroundColor: "transparent" }}>
             Aliquid perspiciatis excepturi officia illum quam omnis blanditiis.
             Nobis a consequuntur aspernatur dignissimos eius repellendus et.
             Ipsum vitae ex obcaecati numquam rem! Lorem ipsum dolor sit amet
