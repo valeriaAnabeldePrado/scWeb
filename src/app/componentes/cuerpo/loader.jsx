@@ -17,7 +17,7 @@ const MiLoader = ({ children }) => {
 
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 1000);
   }, [dispatch]);
   return (
     <>

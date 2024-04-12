@@ -42,6 +42,18 @@ export const animateTituloB = () => {
     .to(".O", { ease: "power3.out", opacity: 1, y: 0 });
   return () => timelineB.kill();
 };
+//animacionHero Celu
+export const animacionCelu = () => {
+  let timeline = gsap.timeline();
+  timeline
+    .to(".letraResS", { ease: "power3.out", opacity: 1, y: 0 })
+    .to(".letraResT", { ease: "power3.out", opacity: 1, y: 0 })
+    .to(".letraResC", { ease: "power3.out", opacity: 1, y: 0 })
+    .to(".letraResU", { ease: "power3.out", opacity: 1, y: 0 })
+    .to(".letraResD", { ease: "power3.out", opacity: 1, y: 0 })
+    .to(".letraResI", { ease: "power3.out", opacity: 1, y: 0 })
+    .to(".letraResO", { ease: "power3.out", opacity: 1, y: 0 });
+};
 
 export const animateTextoHero = () => {
   gsap.to(".textoHero", {

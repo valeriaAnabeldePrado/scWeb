@@ -50,6 +50,10 @@ $paddingRespCelu: 4% 8%;
   font-weight: 200;
   font-style: italic;
 }
+@mixin fuenteExtralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+}
 @mixin fuenteSemiBold {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
