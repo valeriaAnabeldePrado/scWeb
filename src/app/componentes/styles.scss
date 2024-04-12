@@ -144,13 +144,7 @@
   height: 20vh;
   width: 20vh;
 }
-.esferaRes {
-  left: 10%;
-  height: 15vh;
-  width: 15vh;
-  top: 80%;
-  object-fit: contain;
-}
+
 .textoHero {
   width: 40%;
   background-color: transparent;
@@ -205,7 +199,7 @@
 //Titulo hero-res
 .cont-tituloRes {
   display: flex;
-
+  margin-bottom: 3rem;
   flex-direction: column;
   align-self: flex-start;
   margin-top: 3rem;

@@ -30,15 +30,6 @@ const Hero = () => {
             omnis praesentium nulla.
           </h4>
           {valorRes <= 600 ? <ScTelephone /> : <ScDesktop />}
-          {valorRes <= 750 ? (
-            <img
-              src="./esferaOsc.png"
-              alt="esfera"
-              className="esfera esferaRes"
-            />
-          ) : (
-            ""
-          )}
         </div>
       </ResizeW>
     </>
