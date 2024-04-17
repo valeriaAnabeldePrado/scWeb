@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { cambiarTamanio } from "ana/app/redux/slice";
+import PreloaderSC from "./preloaderSC";
 
 const MiLoader = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -17,19 +18,9 @@ const MiLoader = ({ children }) => {
 
     setTimeout(() => {
       setIsLoading(false);
-    }, 1000);
+    }, 2300);
   }, [dispatch]);
-  return (
-    <>
-      {isLoading ? (
-        <div style={{ backgroundColor: "aqua", height: "100vh" }}>
-          <h1>Cargando...</h1>
-        </div>
-      ) : (
-        <>{children}</>
-      )}
-    </>
-  );
+  return <>{isLoading ? <PreloaderSC /> : <>{children}</>}</>;
 };
 
 export default MiLoader;

@@ -622,6 +622,71 @@
   z-index: 4;
   top: 30%;
 }
+//Preloader//
+.container-prel {
+  height: 100vh;
+  background-image: url("/fondoLoad.jpg");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #101010;
+  align-content: center;
+  overflow: hidden;
+}
+
+.container-H {
+  position: relative;
+  bottom: 20%;
+  left: 10%;
+}
+
+.h22 {
+  background-color: transparent;
+  color: transparent;
+  font-size: 22em;
+  font-weight: 900;
+  position: absolute; /* Posición absoluta */
+  top: -35px;
+  left: -40px;
+  -webkit-text-stroke: 4px #101010;
+  transform: translateY(-80vh);
+  opacity: 1;
+}
+
+.h11 {
+  transform: translateY(-80vh);
+  opacity: 0;
+  font-size: 22em;
+  font-weight: 900;
+  position: absolute;
+  background-color: transparent;
+}
+// @media screen and (width <= 650px) {
+//   .h22,
+//   .h11 {
+//     font-size: 15em;
+//   }
+//   .container-H {
+//     bottom: 0%;
+//     left: 15%;
+//   }
+//   .container-prel {
+//     background-position: left top;
+//   }
+// }
+// @media screen and (width <= 400px) {
+//   .h22,
+//   .h11 {
+//     font-size: 11em;
+//   }
+//   .h22 {
+//     top: -45px;
+//     left: -10px;
+//   }
+//   .container-H {
+//     left: 12%;
+//   }
+// }
 @media screen and (width <= 900px) {
   .seccion-parrafos {
     height: 80vh !important;
@@ -639,4 +704,7 @@
   .sticky {
     top: 45%;
   }
+}
+.contenedorPad {
+  opacity: 0;
 }
