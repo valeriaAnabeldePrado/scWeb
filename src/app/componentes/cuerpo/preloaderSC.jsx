@@ -4,24 +4,25 @@ import "../styles.scss";
 import { useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-const PreloaderSC = () => {
+const PreloaderSC = ({ setIsLoading }) => {
   const hHref = useRef(null);
 
   useGSAP(
     () => {
-      const tl = gsap.timeline();
-      tl.to("#h1", { y: -2, opacity: 1, ease: "power2.out" })
-        .to("#h2", { y: 0, ease: "power2.out" }, "0.2")
-        .to("#h1", { x: -700, scale: 26, ease: "power2.out", duration: 1.5 })
+      const tl = gsap.timeline({
+        onComplete: () => setIsLoading(false),
+      });
+      tl.to("#h1", { y: -2, opacity: 1, ease: "power2.out", duration: 1.2 })
+        .to("#h2", { y: 0, ease: "power2.out", duration: 1.2 }, "0.2")
+        .to("#h1", { x: -700, scale: 60, ease: "power2.out", duration: 1.4 })
         .to(
           "#h2",
-          { x: -700, scale: 30, ease: "power2.out", duration: 1.5 },
+          { x: -700, scale: 60, ease: "power2.out", duration: 1.4 },
           "<"
-        )
-        .to(".container-prel", { autoAlpha: 0, ease: "power2.out" });
+        );
     },
 
-    { scope: hHref, delay: 2 }
+    { scope: hHref }
   );
 
   return (
