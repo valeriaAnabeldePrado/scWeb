@@ -18,7 +18,7 @@ const MiLoader = ({ children }) => {
 
     setTimeout(() => {
       setIsLoading(false);
-    }, 4000);
+    }, 1500);
   }, [dispatch]);
   return <>{isLoading ? <PreloaderSC /> : <>{children}</>}</>;
 };

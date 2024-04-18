@@ -6,6 +6,7 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 const PreloaderSC = () => {
   const hHref = useRef(null);
+
   useGSAP(
     () => {
       const tl = gsap.timeline();
@@ -14,11 +15,10 @@ const PreloaderSC = () => {
         .to("#h1", { x: -700, scale: 26, ease: "power2.out", duration: 1.5 })
         .to(
           "#h2",
-          { x: -700, scale: 26, ease: "power2.out", duration: 1.5 },
+          { x: -700, scale: 30, ease: "power2.out", duration: 1.5 },
           "<"
         )
-        .to(".container-prel", { opacity: 0, ease: "power2.out" })
-        .to(".container-prel", { display: "none", ease: "power2.out" });
+        .to(".container-prel", { autoAlpha: 0, ease: "power2.out" });
     },
 
     { scope: hHref }
