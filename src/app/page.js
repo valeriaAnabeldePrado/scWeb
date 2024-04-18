@@ -14,6 +14,12 @@ export default function Home() {
   return (
     <>
       <MiLoader>
+        <svg className="pointer-events-none absolute cursor-none">
+          <filter id="grainy">
+            <feTurbulence type="turbulence" baseFrequency=".5"></feTurbulence>
+            <feColorMatrix type="saturate" values="0"></feColorMatrix>
+          </filter>
+        </svg>
         <Wraper>
           <Inicio>
             <Hero />

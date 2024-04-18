@@ -14,10 +14,10 @@ const PreloaderSC = ({ setIsLoading }) => {
       });
       tl.to("#h1", { y: -2, opacity: 1, ease: "power2.out", duration: 1.2 })
         .to("#h2", { y: 0, ease: "power2.out", duration: 1.2 }, "0.2")
-        .to("#h1", { x: -700, scale: 60, ease: "power2.out", duration: 1.4 })
+        .to("#h1", { x: -800, scale: 80, ease: "power2.out", duration: 1.4 })
         .to(
           "#h2",
-          { x: -700, scale: 60, ease: "power2.out", duration: 1.4 },
+          { x: -800, scale: 80, ease: "power2.out", duration: 1.4 },
           "<"
         );
     },

@@ -625,10 +625,11 @@
 //Preloader//
 .container-prel {
   height: 100vh;
-  background-image: url("/fondoLoad.webp");
-  background-position: bottom;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: linear-gradient(
+    324deg,
+    rgba(124, 39, 242, 1) 25%,
+    rgba(92, 53, 145, 1) 76%
+  );
   color: #101010;
   align-content: center;
   overflow: hidden;
