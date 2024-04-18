@@ -21,7 +21,7 @@ const PreloaderSC = () => {
         .to(".container-prel", { autoAlpha: 0, ease: "power2.out" });
     },
 
-    { scope: hHref, delay: "window.onload" }
+    { scope: hHref, delay: 2 }
   );
 
   return (
