@@ -29,7 +29,14 @@ const Penultima = () => {
       </section>
       <section className="Contactanos-form">
         <h2 className="contactanos-for-h2">Contactate con nosotros</h2>
-        <FormOk />
+        <section className="contContacto">
+          <a href="mailto:contacto@smartcloudstudio.com">
+            <p className="contactoB">⟡ contacto@smartcloudstudio.com ⟡</p>
+          </a>
+          <a href="https://wa.me/XXXXXXXXXX">
+            <p className="contactoB">⟡ Contáctanos por WhatsApp ⟡</p>
+          </a>
+        </section>
       </section>
       <FooterInfinito />
     </>

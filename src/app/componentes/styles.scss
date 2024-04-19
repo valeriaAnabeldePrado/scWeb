@@ -357,7 +357,7 @@
 }
 
 .sticky {
-  border: 2px solid #000;
+  border: 2px solid #101010;
 
   height: 100vh;
   display: flex;
@@ -374,7 +374,7 @@
     height: 80vh;
     width: 30vw;
     background-color: transparent;
-    border: 2px solid #000;
+    border: 2px solid #101010;
     display: flex;
     @media screen and (width <= 1200px) {
       height: 70vh;
@@ -519,8 +519,30 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  color: #fff;
   @media screen and (width <= 490px) {
     padding: 12%;
+  }
+}
+.contContacto {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.5em;
+  .contactoB {
+    @include fuenteExtralightItalic;
+    font-size: 4vw;
+    transition: 1.5s ease-in-out;
+    &:hover {
+      color: #853fe4;
+    }
+    @media screen and (width <= 490px) {
+      font-weight: 600;
+    }
+  }
+}
+@media screen and (width <= 490px) {
+  .contactoB {
+    font-size: 1px;
   }
 }
 .contactanos-for-h2 {
