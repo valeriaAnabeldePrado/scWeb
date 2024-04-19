@@ -33,6 +33,8 @@ const CardServicios = () => {
                 <section className="section2">section2</section>
                 <section className="section3">section3</section>
                 <section className="section4">section4</section>
+                <section className="section5">section4</section>
+                <section className="section6">section4</section>
               </section>
             </div>
           </section>

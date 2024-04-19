@@ -239,6 +239,9 @@
     margin: 8% 0 0 0;
     font-weight: 400;
   }
+  @media screen and (width <= 600px) {
+    font-size: 5.5vw;
+  }
   @media screen and (width <= 490px) {
     padding: 0 3rem;
   }
@@ -312,6 +315,7 @@
 .contenedor-stycki {
   padding: 8% 12% 0 12%;
   height: 100%;
+  background-color: #853fe4;
   color: #fff;
   display: flex;
   position: relative;
@@ -413,6 +417,7 @@
       height: 100%;
       background-color: yellowgreen;
     }
+
     .section4 {
       position: absolute;
       top: 0;
@@ -423,6 +428,28 @@
       border-bottom-right-radius: 100%;
       height: 100%;
       background-color: rgb(86, 9, 253);
+    }
+    .section5 {
+      position: absolute;
+      top: 0;
+      opacity: 0;
+      left: 0;
+      width: 0%;
+      border-top-right-radius: 100%;
+      border-bottom-right-radius: 100%;
+      height: 100%;
+      background-color: rgb(253, 9, 9);
+    }
+    .section6 {
+      position: absolute;
+      top: 0;
+      opacity: 0;
+      left: 0;
+      width: 0%;
+      border-top-right-radius: 100%;
+      border-bottom-right-radius: 100%;
+      height: 100%;
+      background-color: rgb(253, 139, 9);
     }
   }
 }
@@ -723,9 +750,10 @@
     font-size: 10vh;
   }
 }
-@media screen and (max-height: 610px) {
+@media screen and (max-height: 750px) {
   .sticky {
-    top: 45%;
+    top: 40% !important;
+    //background-color: #853fe4;
   }
 }
 .contenedorPad {

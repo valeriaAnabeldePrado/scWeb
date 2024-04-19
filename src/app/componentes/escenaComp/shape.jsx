@@ -8,6 +8,8 @@ import gsap from "gsap";
 const ShapeDistor = () => {
   const [posision, setPosicion] = useState([-5, -1.5, 6]);
   const [posisionB, setPosicionB] = useState([-10, 3, -8]);
+  const [toop, seTtoop] = useState(15);
+  const [traslat, seTtraslat] = useState(0);
   const sphereRef = useRef(null);
   const esfera2 = useRef(null);
   const { nodes, materials } = useGLTF("/burbu.glb");
@@ -19,6 +21,8 @@ const ShapeDistor = () => {
       if (ancho < 700) {
         setPosicion([-5, -6, 2]);
         setPosicionB([-10, 3, -3]);
+        seTtoop(0);
+        seTtraslat(13);
       }
     };
 
@@ -57,7 +61,7 @@ const ShapeDistor = () => {
 
     timeline.to(
       ".titlee",
-      { opacity: 1, top: "15%", transform: "translateY(0)" },
+      { opacity: 1, top: `${toop}%`, transform: `translateY(-${traslat}%)` },
       "-=40%"
     );
 

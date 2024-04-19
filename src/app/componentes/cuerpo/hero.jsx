@@ -24,10 +24,11 @@ const Hero = () => {
           <img src="./esferaOsc.png" alt="esfera" className="esfera esfera1" />
           <img src="./blopesfera.png" alt="esfera" className="esfera esfera2" />
           <h4 className="textoHero">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero
-            provident fugit sequi! Tenetur aut nostrum nihil labore
-            voluptatibus, vel eaque, animi, iure ab ut nesciunt assumenda id
-            omnis praesentium nulla.
+            La innovación, el diseño y la tecnología se entrelazan para crear
+            experiencias digitales que desafían lo convencional. Somos más que
+            un estudio; somos vanguardia y transformación, ofrecemos soluciones
+            únicas y personalizadas que elevan tu presencia. Lideramos una nueva
+            era de innovación.
           </h4>
           {valorRes <= 600 ? <ScTelephone /> : <ScDesktop />}
         </div>

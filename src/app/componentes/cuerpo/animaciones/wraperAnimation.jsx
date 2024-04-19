@@ -1,9 +1,30 @@
 "use client";
-import React from "react";
+import React, { useState, useCallback } from "react";
 import { useEffect } from "react";
 import gsap from "gsap";
 
 const WraperAnimation = ({ children }) => {
+  const [empieza, setEmpieza] = useState("30% center");
+  const [finaliza, setFinaliza] = useState("+=500%");
+
+  const handleResize = useCallback(() => {
+    const ancho = window.innerWidth;
+    if (ancho < 900) {
+      setEmpieza("35% center");
+      setFinaliza("+=410%");
+    }
+  }, []);
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [handleResize]);
+
+  console.log(empieza);
+  console.log(finaliza);
   //Para que la seccion de servicios se visualice por sobre encima de la esfera de conoce nuestras propuestas
   useEffect(() => {
     let ctx = gsap.context(() => {
@@ -27,13 +48,12 @@ const WraperAnimation = ({ children }) => {
       scrollTrigger: {
         trigger: ".contenedor-stycki",
         scrub: 2,
-        start: "52% center",
-        end: "+=260%",
-        markers: false,
-        duration: 6,
+        start: () => empieza,
+        end: () => finaliza,
+        markers: true,
+        duration: 10,
       },
     });
-
     tl.to(".section2", {
       width: "100%",
       opacity: "1",
@@ -55,10 +75,24 @@ const WraperAnimation = ({ children }) => {
       borderRadius: "0",
       duration: 2,
     });
+    tl.to(".section5", {
+      width: "100%",
+      opacity: "1",
+      left: "0",
+      borderRadius: "0",
+      duration: 2,
+    });
+    tl.to(".section6", {
+      width: "100%",
+      opacity: "1",
+      left: "0",
+      borderRadius: "0",
+      duration: 2,
+    });
     return () => tl.kill();
-  }, []);
+  }, [empieza, finaliza]);
 
-  return <div style={{ height: "auto" }}>{children}</div>;
+  return <div>{children}</div>;
 };
 
 export default WraperAnimation;
