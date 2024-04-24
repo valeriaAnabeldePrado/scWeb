@@ -6,11 +6,11 @@ import ResizeW from "ana/app/redux/useResize";
 import CardServRes from "./cardServRes";
 const ServiciosResp = () => {
   const valorSili = useSelector((state) => state.valorTamanio.tamanio);
-  console.log(valorSili);
+
   return (
     <>
       <ResizeW>
-        {valorSili <= 600 ? <CardServRes /> : <CardServicios />}
+        {valorSili <= 644 ? <CardServRes /> : <CardServicios />}
       </ResizeW>
     </>
   );

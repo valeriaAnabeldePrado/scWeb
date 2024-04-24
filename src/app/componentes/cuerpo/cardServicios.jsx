@@ -20,10 +20,15 @@ const CardServicios = () => {
                   {section.titleC && (
                     <h2 className="section-parrafos-h2">{section.titleC}</h2>
                   )}
-                  {section.titleD && (
-                    <h2 className="section-parrafos-h2">{section.titleD}</h2>
-                  )}
+
                   <p className="section-parrafos-p">{section.content}</p>
+                  <section className="cont-etiqueta">
+                    {section.tags.map((etiqueta, index) => (
+                      <h4 key={index} className="etiquetaT">
+                        {etiqueta}
+                      </h4>
+                    ))}
+                  </section>
                 </section>
               ))}
             </div>

@@ -1,5 +1,4 @@
 import React from "react";
-import FormOk from "./form";
 import FooterInfinito from "./footer";
 
 const Penultima = () => {

@@ -23,8 +23,6 @@ const WraperAnimation = ({ children }) => {
     };
   }, [handleResize]);
 
-  console.log(empieza);
-  console.log(finaliza);
   //Para que la seccion de servicios se visualice por sobre encima de la esfera de conoce nuestras propuestas
   useEffect(() => {
     let ctx = gsap.context(() => {
@@ -50,7 +48,7 @@ const WraperAnimation = ({ children }) => {
         scrub: 2,
         start: () => empieza,
         end: () => finaliza,
-        markers: true,
+        markers: false,
         duration: 10,
       },
     });
@@ -60,7 +58,7 @@ const WraperAnimation = ({ children }) => {
       left: "0",
       borderRadius: "0",
       duration: 2,
-    });
+    }).to(".section1", { filter: "grayscale(90%)" }, "=");
     tl.to(".section3", {
       width: "100%",
       opacity: "1",
