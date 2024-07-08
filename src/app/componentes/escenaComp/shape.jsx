@@ -79,7 +79,7 @@ const ShapeDistor = () => {
           geometry={nodes.Sphere.geometry}
           material={materials["Material.001"]}
           position={posisionB}
-          scale={1.5}
+          scale={2}
           rotation={[0.343, 0.825, 0.289]}
         ></mesh>
 
@@ -92,13 +92,13 @@ const ShapeDistor = () => {
           material={materials["Material.001"]}
           position={posision}
           rotation={[12, 10, 9]}
-          scale={3}
+          scale={4}
         />
 
         <directionalLight position={[-5, 2, 15]} intensity={2} />
         <directionalLight position={[-10, 6, -10]} intensity={5} />
         <directionalLight position={[20, 6, -35]} intensity={12} />
-        <Environment path="/envA" />
+        <Environment preset="night" />
       </group>
     </>
   );

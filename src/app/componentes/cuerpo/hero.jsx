@@ -21,8 +21,12 @@ const Hero = () => {
     <>
       <ResizeW>
         <div className="hero-cuerpo" ref={heroRef}>
-          <img src="./esferaOsc.png" alt="esfera" className="esfera esfera1" />
-          <img src="./blopesfera.png" alt="esfera" className="esfera esfera2" />
+          <img src="./esferaOsc.webp" alt="esfera" className="esfera esfera1" />
+          <img
+            src="./blopesfera.webp"
+            alt="esfera"
+            className="esfera esfera2"
+          />
           <h4 className="textoHero">
             La innovación, el diseño y la tecnología se entrelazan para crear
             experiencias digitales que desafían lo convencional. Somos más que

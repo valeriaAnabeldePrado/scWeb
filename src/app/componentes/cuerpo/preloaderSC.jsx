@@ -12,12 +12,12 @@ const PreloaderSC = ({ setIsLoading }) => {
       const tl = gsap.timeline({
         onComplete: () => setIsLoading(false),
       });
-      tl.to("#h1", { y: -2, opacity: 1, ease: "power2.out", duration: 1.2 })
-        .to("#h2", { y: 0, ease: "power2.out", duration: 1.2 }, "0.2")
-        .to("#h1", { x: -900, scale: 80, ease: "power2.out", duration: 1.4 })
+      tl.to("#h1", { y: -2, opacity: 1, ease: "power2.out", duration: 0.3 })
+        .to("#h2", { y: 0, ease: "power2.out", duration: 0.4 }, "0.2")
+        .to("#h1", { x: -900, scale: 80, ease: "power2.out", duration: 0.5 })
         .to(
           "#h2",
-          { x: -900, scale: 80, ease: "power2.out", duration: 1.4 },
+          { x: -900, scale: 80, ease: "power2.out", duration: 0.4 },
           "<"
         );
     },

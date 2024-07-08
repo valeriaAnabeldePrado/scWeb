@@ -14,26 +14,26 @@ import NavBar from "./componentes/cuerpo/navBar";
 export default function Home() {
   return (
     <>
-      {/* <MiLoader> */}
-      <svg className="pointer-events-none absolute cursor-none">
-        <filter id="grainy">
-          <feTurbulence type="turbulence" baseFrequency=".5"></feTurbulence>
-          <feColorMatrix type="saturate" values="0"></feColorMatrix>
-        </filter>
-      </svg>
-      <Wraper>
-        <Inicio>
-          <RecargaWraper />
-          <Hero />
-          <Presentacion />
-          <BtnScroll />
-          <SeccionServ />
-          <ServiciosResp />
-          <FooterInfinito />
-          <Penultima />
-        </Inicio>
-      </Wraper>
-      {/* </MiLoader> */}
+      <MiLoader>
+        <svg className="pointer-events-none absolute cursor-none">
+          <filter id="grainy">
+            <feTurbulence type="turbulence" baseFrequency=".5"></feTurbulence>
+            <feColorMatrix type="saturate" values="0"></feColorMatrix>
+          </filter>
+        </svg>
+        <Wraper>
+          <Inicio>
+            <RecargaWraper />
+            <Hero />
+            <Presentacion />
+            <BtnScroll />
+            <SeccionServ />
+            <ServiciosResp />
+            <FooterInfinito />
+            <Penultima />
+          </Inicio>
+        </Wraper>
+      </MiLoader>
     </>
   );
 }

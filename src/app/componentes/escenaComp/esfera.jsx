@@ -13,7 +13,7 @@ const Esfera = () => {
         shadows
         className="canvaAlt"
       >
-        {/* <fog attach="fog" args={["#17171b", 1, 40]} /> */}
+      
         <ShapeDistor />
         <ambientLight color={"#fff"} intensity={2} />
         <pointLight position={[0, 10, 15]} />
