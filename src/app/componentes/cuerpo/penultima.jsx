@@ -21,7 +21,7 @@ const Penultima = () => {
             necesidades y desarrollar una estrategia personalizada que te
             ayudará a alcanzar tus objetivos.
           </p>
-          <button className="block w-full  bg-indigo-600 px-3.5 py-2.5 text-center text-lg font-normal text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600  buttonb">
+          <button className="block w-full  bg-indigo-600 px-3.5 py-2.5 text-center text-lg font-normal text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 buttonb">
             <p className="contactanos-p">Inicia ahora</p>
           </button>
         </div>

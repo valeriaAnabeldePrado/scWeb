@@ -66,11 +66,11 @@ const WraperAnimation = ({ children }) => {
       borderRadius: "0",
       duration: 2,
     });
-    tl.to(".section4", {
+    tl.to(".video-back", {
       width: "100%",
       opacity: "1",
       left: "0",
-      borderRadius: "0",
+      borderRadius: "0", // Aquí asegúrate de animar también el borderRadius
       duration: 2,
     });
     tl.to(".section5", {

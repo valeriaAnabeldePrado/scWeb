@@ -88,6 +88,7 @@ $paddingRespCelu: 4% 8%;
 
 @mixin boton($tamaño) {
   width: $tamaño !important;
+  height: 6.5vh;
   border-radius: 25px;
   transition: 500ms ease-in-out;
   &:hover {

@@ -115,6 +115,7 @@ const dataDos = [
       "Diseñamos tarjetas digitales personalizadas para eventos especiales como bodas, bautismos y cumpleaños, combinando creatividad y estética para celebraciones inolvidables.",
   },
 ];
+
 const datosInfo = {
   data,
   dataDos,
