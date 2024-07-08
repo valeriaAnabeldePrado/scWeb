@@ -26,9 +26,9 @@ export const paralaxEsferas = () => {
 export const animateTituloA = () => {
   let timeline = gsap.timeline();
   timeline
-    .to(".T", { duration: 0.3, ease: "power3.out", opacity: 1, y: 0 })
+    .to(".T", { duration: 0.5, ease: "power3.out", opacity: 1, y: 0 })
     .to(".S.posicion3", { duration: 1.1, ease: "power3.out", opacity: 1, y: 0 })
-    .to(".C", { duration: 0.6, ease: "power3.out", opacity: 1, y: 0 })
+    .to(".C", { duration: 0.8, ease: "power3.out", opacity: 1, y: 0 })
     .to(".S.posicion0", { ease: "power3.out", opacity: 1, y: 0 });
   return () => timeline.kill();
 };
@@ -36,9 +36,9 @@ export const animateTituloA = () => {
 export const animateTituloB = () => {
   let timelineB = gsap.timeline();
   timelineB
-    .to(".U", { duration: 0.5, ease: "power3.out", opacity: 1, y: 0 })
-    .to(".D", { duration: 0.6, ease: "power3.out", opacity: 1, y: 0 })
-    .to(".I", { duration: 0.7, ease: "power3.out", opacity: 1, y: 0 })
+    .to(".U", { duration: 0.6, ease: "power3.out", opacity: 1, y: 0 })
+    .to(".D", { duration: 0.7, ease: "power3.out", opacity: 1, y: 0 })
+    .to(".I", { duration: 0.8, ease: "power3.out", opacity: 1, y: 0 })
     .to(".O", { ease: "power3.out", opacity: 1, y: 0 });
   return () => timelineB.kill();
 };
