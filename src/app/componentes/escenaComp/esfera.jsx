@@ -13,8 +13,7 @@ const Esfera = () => {
         shadows
         className="canvaAlt"
       >
-      
-        <ShapeDistor />
+        {/* <ShapeDistor /> */}
         <ambientLight color={"#fff"} intensity={2} />
         <pointLight position={[0, 10, 15]} />
       </Canvas>
