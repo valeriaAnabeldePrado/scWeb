@@ -1,75 +1,97 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "../styles.scss";
 import WraperAnimation from "./animaciones/wraperAnimation";
 import datosInfo from "./data/dataContenido";
 
 const CardServicios = () => {
   const { data } = datosInfo;
-  return (
-    <>
-      <WraperAnimation>
-        <div className="contenedor-animacion">
-          <section className="contenedor-stycki">
-            <div className="cont-cuadradoDos">
-              {data.map((section, index) => (
-                <section key={index} className="seccion-parrafos">
-                  <h2 className="section-parrafos-h2">{section.titleA}</h2>
-                  {section.titleB && (
-                    <h2 className="section-parrafos-h2">{section.titleB}</h2>
-                  )}
-                  {section.titleC && (
-                    <h2 className="section-parrafos-h2">{section.titleC}</h2>
-                  )}
+  const videoRefs = useRef([]);
 
-                  <p className="section-parrafos-p">{section.content}</p>
-                  <section className="cont-etiqueta">
-                    {section.tags.map((etiqueta, index) => (
-                      <h4 key={index} className="etiquetaT">
-                        {etiqueta}
-                      </h4>
-                    ))}
-                  </section>
-                </section>
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.1,
+    };
+
+    const handleIntersection = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.play();
+        } else {
+          entry.target.pause();
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      handleIntersection,
+      observerOptions
+    );
+
+    videoRefs.current.forEach((video) => {
+      if (video) observer.observe(video);
+    });
+
+    return () => {
+      videoRefs.current.forEach((video) => {
+        if (video) observer.unobserve(video);
+      });
+    };
+  }, []);
+
+  return (
+    <WraperAnimation>
+      <div className="contenedor-animacion">
+        <section className="contenedor-stycki">
+          <div className="cont-cuadradoDos">
+            {data.map((section, index) => (
+              <div key={index} className="seccion-parrafos">
+                <h2 className="section-parrafos-h2">{section.titleA}</h2>
+                {section.titleB && (
+                  <h2 className="section-parrafos-h2">{section.titleB}</h2>
+                )}
+                {section.titleC && (
+                  <h2 className="section-parrafos-h2">{section.titleC}</h2>
+                )}
+                <p className="section-parrafos-p">{section.content}</p>
+                <div className="cont-etiqueta">
+                  {section.tags.map((etiqueta, idx) => (
+                    <h4 key={idx} className="etiquetaT">
+                      {etiqueta}
+                    </h4>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="sticky">
+            <div className="imagen">
+              {[
+                "web_develop",
+                "audiovisual",
+                "brandign",
+                "render",
+                "render",
+                "invita",
+              ].map((video, index) => (
+                <div key={index} className={`section${index + 1}`}>
+                  <video
+                    ref={(el) => (videoRefs.current[index] = el)}
+                    className="video-back"
+                    loop
+                    muted
+                    playsInline
+                  >
+                    <source src={`/videos/${video}.mp4`} type="video/mp4" />
+                  </video>
+                </div>
               ))}
             </div>
-            <div className="sticky">
-              <section className="imagen">
-                <section className="section1">
-                  <video autoPlay loop muted playsInline className="video-back">
-                    <source src="/videos/web_develop.mp4" type="video/mp4" />
-                  </video>
-                </section>
-                <section className="section2">
-                  <video autoPlay loop muted playsInline className="video-back">
-                    <source src="/videos/render.mp4" type="video/mp4" />
-                  </video>
-                </section>
-                <section className="section3">
-                  <video autoPlay loop muted playsInline className="video-back">
-                    <source src="/videos/brandign.mp4" type="video/mp4" />
-                  </video>
-                </section>
-                <section className="section4">
-                  <video autoPlay loop muted playsInline className="video-back">
-                    <source src="/videos/render.mp4" type="video/mp4" />
-                  </video>
-                </section>
-                <section className="section5">
-                  <video autoPlay loop muted playsInline className="video-back">
-                    <source src="/videos/render.mp4" type="video/mp4" />
-                  </video>
-                </section>
-                <section className="section6">
-                  <video autoPlay loop muted playsInline className="video-back">
-                    <source src="/videos/invita.mp4" type="video/mp4" />
-                  </video>
-                </section>
-              </section>
-            </div>
-          </section>
-        </div>
-      </WraperAnimation>
-    </>
+          </div>
+        </section>
+      </div>
+    </WraperAnimation>
   );
 };
 
