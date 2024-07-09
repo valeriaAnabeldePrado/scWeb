@@ -91,7 +91,7 @@ const ShapeDistor = () => {
           geometry={nodes.Sphere.geometry}
           material={materials["Material.001"]}
           position={posision}
-          rotation={[12, 10, 9]}
+          rotation={[13, 10, 9]}
           scale={4}
         />
 
