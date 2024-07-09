@@ -55,7 +55,7 @@
   @media screen and (width <= 1200px) {
     background-size: contain;
   }
-  @media screen and (width <= 750px) {
+  @media screen and (width <= 800px) {
     height: 80vh;
     justify-content: center;
     background-size: cover;
@@ -67,6 +67,9 @@
   background-color: transparent;
   width: auto;
   height: auto;
+  @media screen and (width <= 500px) {
+    display: none;
+  }
 }
 .contenedor_img_esferas_uno {
   position: relative;
@@ -79,7 +82,7 @@
 .contenedor_img_esferas_dos {
   position: relative;
   background-color: transparent;
-  right: 50%;
+  right: 30%;
   top: 0;
   width: auto;
   height: auto;
@@ -101,7 +104,7 @@
   }
   @media screen and (width <= 600px) {
     width: 80%;
-    margin: 10em 0 0 0;
+    margin: 3em 0 0 0;
     font-weight: 700;
   }
   @media screen and (max-height: 610px) {
@@ -156,6 +159,7 @@
       @media screen and (width <= 500px) {
         font-size: 5em;
         background-color: transparent;
+        line-height: 80px;
       }
     }
   }
