@@ -56,30 +56,33 @@
     background-size: contain;
   }
   @media screen and (width <= 750px) {
+    height: 80vh;
     justify-content: center;
     background-size: cover;
     background-position: center;
   }
 }
 .esfera {
-  position: absolute;
-
-  //filter: blur(1px);
-  top: 60%;
   object-fit: contain;
   background-color: transparent;
+  width: auto;
+  height: auto;
 }
-.esfera1 {
+.contenedor_img_esferas_uno {
+  position: relative;
+  background-color: transparent;
   top: 20%;
-  left: 10%;
-  height: 10vh;
-  width: 10vh;
+  right: -20%;
+  width: auto;
+  height: auto;
 }
-.esfera2 {
-  right: 5%;
-  top: 50%;
-  height: 20vh;
-  width: 20vh;
+.contenedor_img_esferas_dos {
+  position: relative;
+  background-color: transparent;
+  right: 50%;
+  top: 0;
+  width: auto;
+  height: auto;
 }
 
 .textoHero {
