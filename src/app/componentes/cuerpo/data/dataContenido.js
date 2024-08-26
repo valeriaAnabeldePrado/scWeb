@@ -15,6 +15,7 @@ const data = [
       "Figma",
       "Illustrator",
     ],
+    video: "Avideo",
   },
 
   {
@@ -29,6 +30,7 @@ const data = [
       "Lightroom",
       "CapCut",
     ],
+    video: "Bvideo",
   },
   {
     titleA: "Branding",
@@ -43,26 +45,38 @@ const data = [
       "Presentacion empresarial",
       "Diseño gráfico",
     ],
+    video: "Cvideo",
   },
   {
     titleA: "Ilustración",
     titleB: "digital",
     content:
       "Creamos ilustraciones únicas y atractivas que capturan la esencia de su marca, desde personajes cautivadores hasta escenas complejas y conceptos abstractos.",
-    tags: ["Personajes", "Escenas", "Illustracion creativa", "Arte conceptual"],
+    tags: [
+      "Personajes",
+      "Escenas",
+      "flyer creativos",
+      "Arte digital",
+      "Illustracion creativa",
+      "Arte conceptual",
+    ],
+    video: "Dvideo",
   },
+
   {
     titleA: "Modelado &",
     titleB: "Render 3D",
     content:
       "Ofrecemos renderizados 3D fotorrealistas de alta calidad para arquitectura, productos y entornos virtuales, brindando visualizaciones impresionantes que facilitan la toma de decisiones y la comunicación efectiva.",
     tags: [
-      "Diseño de interiores en 3D",
+      "Diseño",
       "Animación 3D",
-      "Escenas creativas",
       "Mockups",
+      "Escenas creativas",
+      "Escenarios 3D",
       "Visualizacion de productos",
     ],
+    video: "Evideo",
   },
   {
     titleA: "Tarjetas",
@@ -70,12 +84,13 @@ const data = [
     content:
       "Diseñamos tarjetas digitales personalizadas para eventos especiales como bodas, bautismos y cumpleaños, combinando creatividad y estética para celebraciones inolvidables.",
     tags: [
-      "Invitaciones digitales",
-      "Tarjetas personalizadas",
       "Casamientos",
       "Cumpleaños",
+      "Invitaciones digitales",
+      "Tarjetas personalizadas",
       "Eventos empresariales",
     ],
+    video: "Fvideo",
   },
 ];
 
@@ -85,34 +100,40 @@ const dataDos = [
 
     content:
       "Creamos plataformas de comercio electrónico a medida, optimizadas para ofrecer una experiencia de usuario sin fricciones y maximizar las conversiones, combinando diseño atractivo y funcionalidad intuitiva.",
+    video: "Avideo",
   },
   {
     titleA: "Contenido Audiovisual",
 
     content:
       "Producimos contenido de video atractivo que captura la esencia de su marca y resuena con su público objetivo, desde videos corporativos hasta animaciones y contenido de marca impactante.",
+    video: "Bvideo",
   },
   {
     titleA: "Branding Empresarial",
 
     content:
       "Damos vida a marcas memorables a través de un proceso estratégico que abarca el diseño de logotipos, paletas de colores, tipografías y lineamientos visuales coherentes para una presencia distintiva.",
+    video: "Cvideo",
   },
   {
     titleA: "Ilustración digital",
 
     content:
       "Creamos ilustraciones únicas y atractivas que capturan la esencia de su marca, desde personajes cautivadores hasta escenas complejas y conceptos abstractos.",
+    video: "Dvideo",
   },
   {
     titleA: "Modelado & Render 3D",
     content:
       "Ofrecemos renderizados 3D fotorrealistas de alta calidad para arquitectura, productos y entornos virtuales, brindando visualizaciones impresionantes que facilitan la toma de decisiones y la comunicación efectiva.",
+    video: "Evideo",
   },
   {
-    titleA: "Tarjetas digitales",
+    titleA: "Invitaciones digitales",
     content:
       "Diseñamos tarjetas digitales personalizadas para eventos especiales como bodas, bautismos y cumpleaños, combinando creatividad y estética para celebraciones inolvidables.",
+    video: "Fvideo",
   },
 ];
 

@@ -21,9 +21,11 @@ const Penultima = () => {
             necesidades y desarrollar una estrategia personalizada que te
             ayudará a alcanzar tus objetivos.
           </p>
-          <button className="block w-full  bg-indigo-600 px-3.5 py-2.5 text-center text-lg font-normal text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 buttonb">
-            <p className="contactanos-p">Inicia ahora</p>
-          </button>
+          <a href="https://wa.me/2995831639">
+            <button className="block w-full  bg-indigo-600 px-3.5 py-2.5 text-center text-lg font-normal text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 buttonb">
+              <p className="contactanos-p">Inicia ahora</p>
+            </button>
+          </a>
         </div>
       </section>
       <section className="Contactanos-form">
@@ -32,7 +34,7 @@ const Penultima = () => {
           <a href="mailto:contacto@smartcloudstudio.com">
             <p className="contactoB">⟡ contacto@smartcloudstudio.com ⟡</p>
           </a>
-          <a href="https://wa.me/XXXXXXXXXX">
+          <a href="https://wa.me/2995831639">
             <p className="contactoB">⟡ Contáctanos por WhatsApp ⟡</p>
           </a>
         </section>

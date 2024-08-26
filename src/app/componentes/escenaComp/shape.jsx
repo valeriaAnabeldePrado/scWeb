@@ -8,7 +8,7 @@ import gsap from "gsap";
 const ShapeDistor = () => {
   const [posision, setPosicion] = useState([-5, -1.5, 6]);
   const [posisionB, setPosicionB] = useState([-10, 3, -8]);
-  const [toop, seTtoop] = useState(15);
+  const [toop, seTtoop] = useState(5);
   const [traslat, seTtraslat] = useState(0);
   const sphereRef = useRef(null);
   const esfera2 = useRef(null);

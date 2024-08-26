@@ -67,26 +67,25 @@ const CardServicios = () => {
           </div>
           <div className="sticky">
             <div className="imagen">
-              {[
-                "web_develop",
-                "audiovisual",
-                "brandign",
-                "render",
-                "render",
-                "invita",
-              ].map((video, index) => (
-                <div key={index} className={`section${index + 1}`}>
-                  <video
-                    ref={(el) => (videoRefs.current[index] = el)}
-                    className="video-back"
-                    loop
-                    muted
-                    playsInline
-                  >
-                    <source src={`/videos/${video}.mp4`} type="video/mp4" />
-                  </video>
-                </div>
-              ))}
+              {data.map((section, index) => {
+                console.log(`Rendering video ${index + 1}: ${section.video}`);
+                return (
+                  <div key={index} className={`section${index + 1}`}>
+                    <video
+                      ref={(el) => (videoRefs.current[index] = el)}
+                      className="video-back"
+                      loop
+                      muted
+                      playsInline
+                    >
+                      <source
+                        src={`/videos/${section.video}.mp4`}
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>

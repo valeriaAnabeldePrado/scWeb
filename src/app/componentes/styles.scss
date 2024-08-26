@@ -56,7 +56,7 @@
     background-size: contain;
   }
   @media screen and (width <= 800px) {
-    height: 80vh;
+    height: 100vh;
     justify-content: center;
     background-size: cover;
     background-position: center;
@@ -67,7 +67,7 @@
   background-color: transparent;
   width: auto;
   height: auto;
-  @media screen and (width <= 500px) {
+  @media screen and (max-height: 740px) {
     display: none;
   }
 }
@@ -309,6 +309,11 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 1rem;
+}
+@media screen and (width <= 680px) {
+  .cont-etiqueta h4.etiquetaT:nth-last-child(-n + 2) {
+    display: none;
+  }
 }
 .etiquetaT {
   @include poppinMedium;
@@ -580,7 +585,16 @@
   background-color: transparent;
   height: 70vh;
   position: relative;
-  .imagenMuestra {
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.346);
+    z-index: 1;
+  }
+  .video-back-res {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -588,6 +602,7 @@
 }
 .contParafos {
   display: flex;
+  z-index: 2;
   flex-direction: column;
   gap: 20px;
   position: absolute;
@@ -596,18 +611,22 @@
   background-color: transparent;
   .section-h2-R {
     background-color: transparent;
-    color: red;
+    color: #ffffff;
     line-height: 60px;
     @include fuenteExtralightItalic;
     font-size: 3em;
     @media screen and (width <= 490px) {
-      font-size: 2em;
+      font-size: 2.5em;
       line-height: 50px;
-      font-weight: 300;
+      font-weight: 400;
+      padding-bottom: 1rem;
     }
   }
   .section-p-R {
     background-color: transparent;
+    @media screen and (max-height: 740px) {
+      display: none;
+    }
   }
 }
 
