@@ -8,8 +8,8 @@ const CardServRes = () => {
   useEffect(() => {
     const options = {
       root: null,
-      rootMargin: "0px",
-      threshold: 0.5, // El video se reproducirá cuando el 50% sea visible
+      rootMargin: "200px",
+      threshold: 0.1,
     };
 
     const handleIntersect = (entries, observer) => {
@@ -30,7 +30,6 @@ const CardServRes = () => {
       }
     });
 
-    // Limpiar el observer cuando el componente se desmonte
     return () => {
       videoRefs.current.forEach((video) => {
         if (video) {

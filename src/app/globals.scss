@@ -14,7 +14,7 @@ body::before {
   content: "";
   width: 100%;
   height: 100%;
-  z-index: 100;
+  z-index: 1000;
   pointer-events: none;
   opacity: 80%;
   color: #ffff;

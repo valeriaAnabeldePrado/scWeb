@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <>
       <MiLoader>
-        <svg className="pointer-events-none absolute cursor-none z-10">
+        <svg className="pointer-events-none absolute cursor-none">
           <filter id="grainy">
             <feTurbulence
               type="turbulence"
