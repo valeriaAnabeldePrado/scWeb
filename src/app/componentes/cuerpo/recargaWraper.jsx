@@ -5,7 +5,7 @@ import { useEffect } from "react";
 const RecargaWraper = () => {
   useEffect(() => {
     const handleWindowSizeChange = () => {
-      window.location.reload();
+      // window.location.reload();
     };
 
     window.addEventListener("resize", handleWindowSizeChange);
