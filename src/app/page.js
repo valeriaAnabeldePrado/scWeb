@@ -15,10 +15,14 @@ export default function Home() {
   return (
     <>
       <MiLoader>
-        <svg className="pointer-events-none absolute cursor-none">
+        <svg className="pointer-events-none absolute cursor-none z-10">
           <filter id="grainy">
-            <feTurbulence type="turbulence" baseFrequency=".5"></feTurbulence>
-            <feColorMatrix type="saturate" values="0"></feColorMatrix>
+            <feTurbulence
+              type="turbulence"
+              baseFrequency=".5"
+              numOctaves="3"
+              result="warp"
+            ></feTurbulence>
           </filter>
         </svg>
         <Wraper>
