@@ -594,7 +594,10 @@
     background-color: rgba(0, 0, 0, 0.346);
     z-index: 1;
   }
-  .video-back-res {
+  .cont-img-res {
+    height: 100%;
+  }
+  .img-respon {
     height: 100%;
     width: 100%;
     object-fit: cover;

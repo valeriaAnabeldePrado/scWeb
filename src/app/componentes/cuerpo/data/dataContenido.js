@@ -100,40 +100,40 @@ const dataDos = [
 
     content:
       "Creamos plataformas de comercio electrónico a medida, optimizadas para ofrecer una experiencia de usuario sin fricciones y maximizar las conversiones, combinando diseño atractivo y funcionalidad intuitiva.",
-    video: "Avideo",
+    img: "/mokUp.jpg",
   },
   {
     titleA: "Contenido Audiovisual",
 
     content:
       "Producimos contenido de video atractivo que captura la esencia de su marca y resuena con su público objetivo, desde videos corporativos hasta animaciones y contenido de marca impactante.",
-    video: "Bvideo",
+    img: "/mokUp.jpg",
   },
   {
     titleA: "Branding Empresarial",
 
     content:
       "Damos vida a marcas memorables a través de un proceso estratégico que abarca el diseño de logotipos, paletas de colores, tipografías y lineamientos visuales coherentes para una presencia distintiva.",
-    video: "Cvideo",
+    img: "/manual.webp",
   },
   {
     titleA: "Ilustración digital",
 
     content:
       "Creamos ilustraciones únicas y atractivas que capturan la esencia de su marca, desde personajes cautivadores hasta escenas complejas y conceptos abstractos.",
-    video: "Dvideo",
+    img: "/disenio.webp",
   },
   {
     titleA: "Modelado & Render 3D",
     content:
       "Ofrecemos renderizados 3D fotorrealistas de alta calidad para arquitectura, productos y entornos virtuales, brindando visualizaciones impresionantes que facilitan la toma de decisiones y la comunicación efectiva.",
-    video: "Evideo",
+    img: "/mokUp.jpg",
   },
   {
     titleA: "Invitaciones digitales",
     content:
       "Diseñamos tarjetas digitales personalizadas para eventos especiales como bodas, bautismos y cumpleaños, combinando creatividad y estética para celebraciones inolvidables.",
-    video: "Fvideo",
+    img: "/invite.webp",
   },
 ];
 
