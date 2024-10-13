@@ -100,14 +100,14 @@ const dataDos = [
 
     content:
       "Creamos plataformas de comercio electrónico a medida, optimizadas para ofrecer una experiencia de usuario sin fricciones y maximizar las conversiones, combinando diseño atractivo y funcionalidad intuitiva.",
-    img: "/mokUp.jpg",
+    img: "/mockUp.webp",
   },
   {
     titleA: "Contenido Audiovisual",
 
     content:
       "Producimos contenido de video atractivo que captura la esencia de su marca y resuena con su público objetivo, desde videos corporativos hasta animaciones y contenido de marca impactante.",
-    img: "/mokUp.jpg",
+    img: "/audiov.webp",
   },
   {
     titleA: "Branding Empresarial",
@@ -127,7 +127,7 @@ const dataDos = [
     titleA: "Modelado & Render 3D",
     content:
       "Ofrecemos renderizados 3D fotorrealistas de alta calidad para arquitectura, productos y entornos virtuales, brindando visualizaciones impresionantes que facilitan la toma de decisiones y la comunicación efectiva.",
-    img: "/mokUp.jpg",
+    img: "/render.webp",
   },
   {
     titleA: "Invitaciones digitales",
